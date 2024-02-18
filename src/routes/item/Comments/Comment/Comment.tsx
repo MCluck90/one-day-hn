@@ -17,6 +17,7 @@ export const Comment: React.FC<CommentProps> = ({ id }) => {
     <div className={css.root}>
       <div>{item?.by ?? ''}</div>
       <div dangerouslySetInnerHTML={{ __html: formatComment(item?.text) }} />
+      {item?.kids?.map((id) => <Comment key={id} id={id} />)}
     </div>
   )
 }
