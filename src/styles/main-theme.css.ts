@@ -11,7 +11,7 @@ export const theme = createGlobalTheme('body', {
       action: '#97DCFE',
     },
     border: {
-      main: '#2B2B2B',
+      main: '#333',
     },
   },
   spacing: {

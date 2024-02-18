@@ -3,7 +3,8 @@ import { theme } from './main-theme.css'
 
 globalStyle('html, body', {
   fontFamily: 'sans-serif',
-  fontSize: '12pt',
+  fontSize: '16px',
+  lineHeight: 1.7,
   margin: 0,
   padding: 0,
   background: theme.color.background.main,
