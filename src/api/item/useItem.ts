@@ -3,5 +3,6 @@ import { fetchItem } from './fetchItem'
 
 export const useItem = (id: number) =>
   useQuery({
+    queryKey: ['item', id],
     queryFn: () => fetchItem(id),
   })

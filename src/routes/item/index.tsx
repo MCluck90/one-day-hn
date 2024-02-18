@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { useItem } from '../../api/item'
 import { getQueryParam } from '../../url/query-params'
 import { ItemHeader } from './ItemHeader'
+import { Comments } from './Comments'
 
 const ItemPage: React.FC = () => {
   const itemId = Number(getQueryParam('id') ?? '0')
@@ -14,6 +15,7 @@ const ItemPage: React.FC = () => {
   return (
     <div className={css.root}>
       <ItemHeader title={item?.title ?? ''} url={item?.url ?? ''} />
+      {item && <Comments item={item} />}
     </div>
   )
 }
