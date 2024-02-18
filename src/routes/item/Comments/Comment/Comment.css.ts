@@ -8,3 +8,8 @@ export const root = style({
   padding: theme.spacing.medium,
   marginBottom: theme.spacing.small,
 })
+
+export const toggler = style({
+  cursor: 'pointer',
+  marginRight: theme.spacing.small,
+})

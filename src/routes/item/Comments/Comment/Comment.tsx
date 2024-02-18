@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useItem } from '../../../../api/item'
 import * as css from './Comment.css'
+import { Icon } from '../../../../components/Icon'
 
 export interface CommentProps {
   id: number
@@ -8,6 +9,8 @@ export interface CommentProps {
 
 export const Comment: React.FC<CommentProps> = ({ id }) => {
   const { data: item, isLoading } = useItem(id)
+  const [isOpen, setIsOpen] = useState(true)
+  const toggleIsOpen = () => setIsOpen(!isOpen)
 
   if (isLoading) {
     return <div>Loading...</div>
@@ -15,9 +18,23 @@ export const Comment: React.FC<CommentProps> = ({ id }) => {
 
   return (
     <div className={css.root}>
-      <div>{item?.by ?? ''}</div>
-      <div dangerouslySetInnerHTML={{ __html: formatComment(item?.text) }} />
-      {item?.kids?.map((id) => <Comment key={id} id={id} />)}
+      <div>
+        <Icon
+          className={css.toggler}
+          invert
+          onClick={toggleIsOpen}
+          icon={isOpen ? 'angle-small-down' : 'angle-small-right'}
+        />
+        {item?.by ?? ''}
+      </div>
+      {isOpen && (
+        <>
+          <div
+            dangerouslySetInnerHTML={{ __html: formatComment(item?.text) }}
+          />
+          {item?.kids?.map((id) => <Comment key={id} id={id} />)}
+        </>
+      )}
     </div>
   )
 }
