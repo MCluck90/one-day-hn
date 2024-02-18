@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '../../../../styles/main-theme.css'
 
 export const root = style({
@@ -12,4 +12,8 @@ export const root = style({
 export const toggler = style({
   cursor: 'pointer',
   marginRight: theme.spacing.small,
+})
+
+globalStyle(`${root} pre`, {
+  overflow: 'auto',
 })

@@ -21,6 +21,20 @@ globalStyle('p', {
   marginBottom: theme.spacing.small,
 })
 
+globalStyle('pre', {
+  fontFamily: 'monospace',
+  padding: theme.spacing.xsmall,
+  color: theme.color.text.code,
+  background: theme.color.background.code,
+  borderRadius: 5,
+})
+
+globalStyle('code', {
+  fontFamily: 'monospace',
+  color: theme.color.text.code,
+  background: theme.color.background.code,
+})
+
 globalStyle('footer', {
   textAlign: 'center',
 })

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useItem } from '../../../../api/item'
 import * as css from './Comment.css'
 import { Icon } from '../../../../components/Icon'
+import { formatContent } from '../../util/content'
 
 export interface CommentProps {
   id: number
@@ -30,20 +31,11 @@ export const Comment: React.FC<CommentProps> = ({ id }) => {
       {isOpen && (
         <>
           <div
-            dangerouslySetInnerHTML={{ __html: formatComment(item?.text) }}
+            dangerouslySetInnerHTML={{ __html: formatContent(item?.text) }}
           />
           {item?.kids?.map((id) => <Comment key={id} id={id} />)}
         </>
       )}
     </div>
   )
-}
-
-function formatComment(text: string | undefined): string {
-  if (!text) {
-    return ''
-  }
-
-  text = text.replace(/<p>/g, '\n<p>')
-  return text.replace(/^&gt; ([^\n]+)/g, '<blockquote>$1</blockquote>')
 }
