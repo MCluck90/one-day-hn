@@ -16,7 +16,16 @@ export const Comment: React.FC<CommentProps> = ({ id }) => {
   return (
     <div className={css.root}>
       <div>{item?.by ?? ''}</div>
-      <div dangerouslySetInnerHTML={{ __html: item?.text ?? '' }} />
+      <div dangerouslySetInnerHTML={{ __html: formatComment(item?.text) }} />
     </div>
   )
+}
+
+function formatComment(text: string | undefined): string {
+  if (!text) {
+    return ''
+  }
+
+  text = text.replace(/<p>/g, '\n<p>')
+  return text.replace(/^&gt; ([^\n]+)/g, '<blockquote>$1</blockquote>')
 }
