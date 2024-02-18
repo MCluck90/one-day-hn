@@ -13,6 +13,7 @@ globalStyle('html, body', {
 
 globalStyle('a', {
   color: theme.color.text.action,
+  textDecoration: 'none',
 })
 
 globalStyle('p', {
