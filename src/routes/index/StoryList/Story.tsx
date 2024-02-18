@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from '../../domain/Item'
+import { Item } from '../../../domain/Item'
 
 export interface StoryProps {
   story: Item

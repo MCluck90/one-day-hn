@@ -1,10 +1,10 @@
 import React from 'react'
-import { Pagination } from '../../domain/Pagination'
-import { StoryType } from '../../domain/Story'
-import { useStories } from '../../hooks/useStories'
 import { LoadingState } from './Loading'
 import { ErrorState } from './ErrorState'
 import { Story } from './Story'
+import { StoryType } from '../../../domain/Story'
+import { Pagination } from '../../../domain/Pagination'
+import { useStories } from '../../../hooks/useStories'
 
 export interface StoryListProps {
   type: StoryType
