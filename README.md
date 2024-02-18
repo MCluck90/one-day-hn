@@ -27,7 +27,6 @@ I had a free Sunday and thought it would be a fun exercise. I've used [esbuild](
 
 - Everything from scratch\*
 - Stand-alone static site
-- Uses mock data but trivial to connect to a real data source
 - The general structure matches a real app
 
 \* Pick my tools and tie them together myself. No boilerplates or `create-x-app` type commands.
