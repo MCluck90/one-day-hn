@@ -1,5 +1,6 @@
 import React from 'react'
 import { Item } from '../../../domain/Item'
+import { Link } from '../../../components/Link'
 
 export interface StoryProps {
   story: Item
@@ -8,9 +9,9 @@ export interface StoryProps {
 export const Story: React.FC<StoryProps> = ({ story }) => {
   return (
     <div>
-      <a href={story.url}>{story.title}</a>
+      <Link href={story.url ?? ''}>{story.title}</Link>
       <br />
-      <a href={`/item?id=${story.id}`}>Comments</a>
+      <Link href={`/item?id=${story.id}`}>Comments</Link>
     </div>
   )
 }

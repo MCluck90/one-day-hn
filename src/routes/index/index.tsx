@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { StoryType, isStoryType } from '../../domain/Story'
 import { StoryList } from './StoryList'
 import { getQueryParam } from '../../url/query-params'
-import { getNextPage, getPrevPage } from '../../url/relative-urls'
 import { usePage } from '../../hooks/usePage'
+import { PaginationControls } from './PaginationControls'
 
 const IndexPage: React.FC = () => {
   const storyType = getQueryParam('type')
@@ -20,8 +20,7 @@ const IndexPage: React.FC = () => {
         type={isStoryType(storyType) ? storyType : StoryType.Top}
         pagination={{ page, pageSize: 30 }}
       />
-      {page > 0 && <a href={getPrevPage()}>Back</a>}
-      <a href={getNextPage()}>Next</a>
+      <PaginationControls />
     </div>
   )
 }
