@@ -5,6 +5,7 @@ import { Story } from './Story'
 import { StoryType } from '../../../domain/Story'
 import { Pagination } from '../../../domain/Pagination'
 import { useStories } from '../../../hooks/useStories'
+import * as css from './StoryList.css'
 
 export interface StoryListProps {
   type: StoryType
@@ -28,7 +29,7 @@ export const StoryList: React.FC<StoryListProps> = ({ type, pagination }) => {
   }
 
   return (
-    <div>
+    <div className={css.root}>
       <ol start={pagination.page * pagination.pageSize}>
         {stories.map((story) => (
           <li key={story.id}>

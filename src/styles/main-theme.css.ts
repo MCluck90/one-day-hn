@@ -3,8 +3,8 @@ import { createGlobalTheme } from '@vanilla-extract/css'
 export const theme = createGlobalTheme('body', {
   color: {
     background: {
-      main: '#1F1F1F',
-      alt: '#181818',
+      main: '#181818',
+      alt: '#1F1F1F',
     },
     text: {
       main: '#CCCCCC',
