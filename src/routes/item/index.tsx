@@ -7,6 +7,7 @@ import { useItem } from '../../api/item'
 import { getQueryParam } from '../../url/query-params'
 import { ItemHeader } from './ItemHeader'
 import { Comments } from './Comments'
+import { Header } from '../../components/Header'
 
 const ItemPage: React.FC = () => {
   const itemId = Number(getQueryParam('id') ?? '0')
@@ -14,6 +15,8 @@ const ItemPage: React.FC = () => {
 
   return (
     <div className={css.root}>
+      <Header />
+
       <ItemHeader
         title={item?.title ?? ''}
         text={item?.text}

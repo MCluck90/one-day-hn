@@ -8,6 +8,7 @@ import { StoryList } from './StoryList'
 import { getQueryParam } from '../../url/query-params'
 import { usePage } from '../../hooks/usePage'
 import { PaginationControls } from './PaginationControls'
+import { Header } from '../../components/Header'
 
 const IndexPage: React.FC = () => {
   const storyType = getQueryParam('type')
@@ -15,7 +16,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <div className={css.root}>
-      <h1>1DHN</h1>
+      <Header />
 
       <StoryList
         type={isStoryType(storyType) ? storyType : StoryType.Top}

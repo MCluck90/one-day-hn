@@ -9,6 +9,7 @@ export const theme = createGlobalTheme('body', {
     text: {
       main: '#CCCCCC',
       action: '#97DCFE',
+      altAction: '#E4C08D',
     },
     border: {
       main: '#333',
