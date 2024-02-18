@@ -20,12 +20,13 @@ export const Comment: React.FC<CommentProps> = ({ id }) => {
   return (
     <div className={css.root}>
       <div>
-        <Icon
-          className={css.toggler}
-          invert
-          onClick={toggleIsOpen}
-          icon={isOpen ? 'angle-small-down' : 'angle-small-right'}
-        />
+        <a href="javascript:void(0)" onClick={toggleIsOpen}>
+          <Icon
+            className={css.toggler}
+            invert
+            icon={isOpen ? 'angle-small-down' : 'angle-small-right'}
+          />
+        </a>
         {item?.by ?? ''}
       </div>
       {isOpen && (
