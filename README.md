@@ -20,7 +20,7 @@ npx http-server out # run it
 
 ## Why?
 
-I had a free Sunday and thought it would be a fun exercise. I've used [esbuild](https://esbuild.github.io/) and
+I had a few free hours on a Sunday and thought it would be a fun exercise. I've used [esbuild](https://esbuild.github.io/) and
 [vanilla-extract](https://vanilla-extract.style/) in tiny experiments but not in a full application.
 
 ## Design Goals
