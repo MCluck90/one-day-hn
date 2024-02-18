@@ -1,5 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import '../../styles/global.css'
 import * as css from './index.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { StoryType, isStoryType } from '../../domain/Story'
