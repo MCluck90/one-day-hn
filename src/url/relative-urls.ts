@@ -7,7 +7,7 @@ export const getPrevPage = (): string => {
   }
 
   const page = Number(pageParam)
-  if (!Number.isNaN(page) || page <= 0) {
+  if (Number.isNaN(page) || page <= 0) {
     return window.location.href
   }
 
