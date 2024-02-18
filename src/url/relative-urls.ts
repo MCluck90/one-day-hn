@@ -13,12 +13,12 @@ export const getPrevPage = (): string => {
 
   const queryParams = new URLSearchParams(window.location.search)
   queryParams.set('page', (page - 1).toString())
-  return window.location.origin + window.location.pathname + `?${queryParams}`
+  return `/?${queryParams}`
 }
 
 export const getNextPage = (): string => {
   const queryParams = new URLSearchParams(window.location.search)
   const page = Number(getQueryParam('page') ?? 0)
   queryParams.set('page', (page + 1).toString())
-  return window.location.origin + window.location.pathname + `?${queryParams}`
+  return `/?${queryParams}`
 }

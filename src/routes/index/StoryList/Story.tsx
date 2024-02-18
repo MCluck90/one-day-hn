@@ -8,9 +8,9 @@ export interface StoryProps {
 export const Story: React.FC<StoryProps> = ({ story }) => {
   return (
     <div>
-      <a href={story.url}>
-        {story.id}: {story.title}
-      </a>
+      <a href={story.url}>{story.title}</a>
+      <br />
+      <a href={`/item?id=${story.id}`}>Comments</a>
     </div>
   )
 }
