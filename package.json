@@ -1,0 +1,28 @@
+{
+  "name": "one-day-hn",
+  "version": "1.0.0",
+  "description": "An experiment in building a bank app in one day",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs -- --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@vanilla-extract/esbuild-plugin": "^2.3.5",
+    "esbuild": "0.20.0",
+    "eslint": "8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.14.1",
+    "date-fns": "^3.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.3"
+  }
+}
