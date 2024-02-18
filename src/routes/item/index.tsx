@@ -12,6 +12,9 @@ import { Header } from '../../components/Header'
 const ItemPage: React.FC = () => {
   const itemId = Number(getQueryParam('id') ?? '0')
   const { data: item } = useItem(itemId)
+  if (item?.title) {
+    document.title = `${item.title} - 1DHN`
+  }
 
   return (
     <div className={css.root}>
