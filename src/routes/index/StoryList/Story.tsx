@@ -12,7 +12,7 @@ export const Story: React.FC<StoryProps> = ({ story }) => {
     <div>
       <Link href={story.url ?? ''}>{story.title}</Link>
       <br />
-      <Link href={`/item?id=${story.id}`}>
+      <Link href={`./item?id=${story.id}`}>
         <Icon icon="comment" invert />
       </Link>
     </div>
