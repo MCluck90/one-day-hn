@@ -17,7 +17,7 @@ export const Icon: React.FC<IconProps> = ({
 }) => {
   return (
     <img
-      src={`/assets/icons/${icon}.svg`}
+      src={`assets/icons/${icon}.svg`}
       style={invert ? { filter: 'invert(1)' } : undefined}
       height={size ?? 12}
       className={className}
