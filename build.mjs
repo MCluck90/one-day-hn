@@ -25,6 +25,11 @@ await Promise.all(
                 `${outDir}/index.html`,
               )
               console.log(`[${new Date().toISOString()}] built route: ${route}`)
+
+              if (route === 'index') {
+                // Copy over additonal assets
+                fs.cpSync('./assets', 'out/assets', { recursive: true })
+              }
             })
           },
         },
