@@ -29,9 +29,13 @@ export const StoryList: React.FC<StoryListProps> = ({ type, pagination }) => {
 
   return (
     <div>
-      {stories.map((story) => (
-        <Story key={story.id} story={story} />
-      ))}
+      <ol start={pagination.page * pagination.pageSize}>
+        {stories.map((story) => (
+          <li key={story.id}>
+            <Story story={story} />
+          </li>
+        ))}
+      </ol>
     </div>
   )
 }
