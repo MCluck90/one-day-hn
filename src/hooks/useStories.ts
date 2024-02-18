@@ -33,4 +33,5 @@ const fetchStories = async (
 export const useStories = (type: StoryType, pagination: Pagination) =>
   useQuery({
     queryFn: () => fetchStories(type, pagination),
+    staleTime: Infinity,
   })

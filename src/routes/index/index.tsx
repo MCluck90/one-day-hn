@@ -6,10 +6,11 @@ import { StoryType, isStoryType } from '../../domain/Story'
 import { StoryList } from '../../components/StoryList'
 import { getQueryParam } from '../../url/query-params'
 import { getNextPage, getPrevPage } from '../../url/relative-urls'
+import { usePage } from '../../hooks/usePage'
 
 const IndexPage: React.FC = () => {
   const storyType = getQueryParam('type')
-  const page = Number(getQueryParam('page') ?? '0')
+  const page = usePage()
 
   return (
     <div className={css.root}>
