@@ -14,7 +14,11 @@ const ItemPage: React.FC = () => {
 
   return (
     <div className={css.root}>
-      <ItemHeader title={item?.title ?? ''} url={item?.url ?? ''} />
+      <ItemHeader
+        title={item?.title ?? ''}
+        text={item?.text}
+        url={item?.url ?? ''}
+      />
       {item && <Comments item={item} />}
     </div>
   )
